@@ -1,0 +1,7 @@
+datetime, userId, service, message, code
+2024-05-07T15:31:41.081542Z,,Service: createUser,Username set to Fati,200
+2024-05-07T15:31:41.229082Z,,Service: createUser,User created successfully,200
+2024-05-07T15:33:48.645886Z,,Service: createUser,Username set to Dani,200
+2024-05-07T15:33:48.715733Z,,Service: createUser,User created successfully,200
+2024-05-07T15:33:58.817506Z,,Service: createUser,Username set to Silvia,200
+2024-05-07T15:33:58.939424Z,,Service: createUser,User created successfully,200
