@@ -1,0 +1,63 @@
+datetime, userId, service, message, code
+2024-05-07T15:31:41.081542Z,,Service: createUser,Username set to Fati,200
+2024-05-07T15:31:41.229082Z,,Service: createUser,User created successfully,200
+2024-05-07T15:33:48.645886Z,,Service: createUser,Username set to Dani,200
+2024-05-07T15:33:48.715733Z,,Service: createUser,User created successfully,200
+2024-05-07T15:33:58.817506Z,,Service: createUser,Username set to Silvia,200
+2024-05-07T15:33:58.939424Z,,Service: createUser,User created successfully,200
+2024-05-07T15:47:41.658684Z,,Service: createUser,Username set to Silvia,200
+2024-05-07T15:47:41.781512Z,,Service: createUser,User created successfully,200
+2024-05-07T15:48:17.774634Z,,Service: createUser,Username set to Julian,200
+2024-05-07T15:48:17.842614Z,,Service: createUser,User created successfully,200
+2024-05-07T15:48:41.709152Z,,Service: createUser,Username set to Beatricce,200
+2024-05-07T15:48:41.777238Z,,Service: createUser,User created successfully,200
+2024-05-07T15:49:00.720540Z,3,Service: addToCart,"Item added successfully ",200
+2024-05-07T15:49:11.961607Z,3,Service: addToCart,"Item added successfully ",200
+2024-05-07T15:49:51.131301Z,,Service: submit,Submitting order,200
+2024-05-07T15:49:51.136948Z,,Service: submit,Order saved,200
+2024-05-07T15:50:20.352647Z,2,Service: addToCart,"Item added successfully ",200
+2024-05-07T15:50:34.237253Z,,Service: submit,Submitting order,200
+2024-05-07T15:50:34.240464Z,,Service: submit,Order saved,200
+2024-05-07T15:51:45.524494Z,,Service: createUser,Username set to John,200
+2024-05-07T15:51:45.590022Z,,Service: createUser,User created successfully,200
+2024-05-07T15:52:26.706077Z,,Service: addToCart,Invalid itemid -- unable to add item,404
+2024-05-07T15:52:46.105813Z,4,Service: addToCart,"Item added successfully ",200
+2024-05-07T15:53:03.756372Z,,Service: submit,Submitting order,200
+2024-05-07T15:53:03.760415Z,,Service: submit,Order saved,200
+2024-05-07T16:56:45.028917Z,,Service: createUser,Username set to Sebastian,200
+2024-05-07T16:56:45.178536Z,,Service: createUser,User created successfully,200
+2024-05-07T16:57:22.857925Z,5,Service: addToCart,"Item added successfully ",200
+2024-05-07T16:57:32.104833Z,,Service: submit,Submitting order,200
+2024-05-07T16:57:32.129466Z,,Service: submit,Order saved,200
+2024-05-07T17:01:29.043766Z,,Service: createUser,Username set to Sebastian,200
+2024-05-07T17:01:29.049817Z,,Service: createUser,Password less that 7 characters,404
+2024-05-07T17:08:10.688Z,,Service: createUser,Username set to spotty,200
+2024-05-07T17:08:10.689166Z,,Service: createUser,Password less that 7 characters,404
+2024-05-07T17:09:08.480790Z,,Service: createUser,Username set to Lara,200
+2024-05-07T17:09:08.549242Z,,Service: createUser,User created successfully,200
+2024-05-07T17:35:52.936224Z,6,Service: addToCart,"Item added successfully ",200
+2024-05-07T17:36:06.289554Z,6,Service: addToCart,"Item added successfully ",200
+2024-05-07T17:36:18.644251Z,,Service: submit,Submitting order,200
+2024-05-07T17:36:18.655578Z,,Service: submit,Order saved,200
+2024-05-07T17:50:26.949512Z,6,Service: addToCart,"Item added successfully ",200
+2024-05-07T17:50:38.992423Z,6,Service: addToCart,"Item added successfully ",200
+2024-05-07T17:50:44.778401Z,,Service: submit,Submitting order,200
+2024-05-07T17:50:44.799440Z,,Service: submit,Order saved,200
+2024-05-07T17:54:45.276060Z,6,Service: addToCart,"Item added successfully ",200
+2024-05-07T17:54:54.626014Z,6,Service: addToCart,"Item added successfully ",200
+2024-05-07T17:55:04.241932Z,6,Service: addToCart,"Item added successfully ",200
+2024-05-07T21:11:43.532430Z,,Service: createUser,Username set to Matias,200
+2024-05-07T21:11:43.679698Z,,Service: createUser,User created successfully,200
+2024-05-07T21:12:04.043782Z,1,Service: addToCart,"Item added successfully ",200
+2024-05-07T21:12:14.583889Z,,Service: submit,Submitting order,200
+2024-05-07T21:12:14.595687Z,,Service: submit,Order saved,200
+2024-05-07T21:27:01.341734Z,1,Service: addToCart,"Item added successfully ",200
+2024-05-07T21:27:12.638728Z,1,Service: addToCart,"Item added successfully ",200
+2024-05-07T21:27:16.801119Z,,Service: submit,Submitting order,200
+2024-05-07T21:27:16.816422Z,,Service: submit,Order saved,200
+2024-05-07T21:30:37.900493Z,,Service: createUser,Username set to Raquel,200
+2024-05-07T21:30:37.968715Z,,Service: createUser,User created successfully,200
+2024-05-07T21:30:57.954397Z,2,Service: addToCart,"Item added successfully ",200
+2024-05-07T21:31:07.808868Z,2,Service: addToCart,"Item added successfully ",200
+2024-05-07T21:31:17.683811Z,,Service: submit,Submitting order,200
+2024-05-07T21:31:17.702393Z,,Service: submit,Order saved,200
