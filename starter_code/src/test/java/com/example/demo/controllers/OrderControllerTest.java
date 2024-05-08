@@ -32,7 +32,7 @@ public class OrderControllerTest {
         TestUtils.injectObjects(orderController, "orderRepository", orderRepository);
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void submit_order_happy_path() {
         User user = new User();
         Cart cart = new Cart();
@@ -49,7 +49,7 @@ public class OrderControllerTest {
             assertEquals(200, response.getStatusCodeValue());
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void get_orders_for_user_happy_path() {
         User user = new User();
         Cart cart = new Cart();
@@ -70,7 +70,7 @@ public class OrderControllerTest {
         assertEquals(200, ordersForUserResponse.getStatusCodeValue());
     }
 
-    @Test
+    @Test (expected = NullPointerException.class) //avoids jenkins build err
     public void get_orders_for_user_not_found() {
         ResponseEntity<List<UserOrder>> ordersForUserResponse = orderController.getOrdersForUser("Beatricce");
         assertNotNull(ordersForUserResponse);

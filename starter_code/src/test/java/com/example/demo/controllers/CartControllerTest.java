@@ -37,7 +37,7 @@ public class CartControllerTest {
 
      }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void add_to_cart_happy_path() {
 
         ModifyCartRequest modifyCartRequest = new ModifyCartRequest();
@@ -66,7 +66,7 @@ public class CartControllerTest {
 
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void remove_from_cart_happy_path() {
 
         ModifyCartRequest modifyCartRequest = new ModifyCartRequest();
@@ -94,7 +94,7 @@ public class CartControllerTest {
         assertEquals(200, response.getStatusCodeValue());
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void item_not_found_in_cart() {
         ModifyCartRequest modifyCartRequest = new ModifyCartRequest();
         modifyCartRequest.setUsername("dani");

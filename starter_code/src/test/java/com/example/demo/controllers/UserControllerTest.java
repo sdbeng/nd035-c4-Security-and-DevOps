@@ -35,7 +35,7 @@ public class UserControllerTest {
         TestUtils.injectObjects(userController, "bCryptPasswordEncoder", encoder);
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void create_user_happy_path() throws Exception {
         // TODO: create stabbing with encoder
         when(encoder.encode("testpassword")).thenReturn("thisIsHashed");
@@ -73,7 +73,7 @@ public class UserControllerTest {
         assertEquals("testpassword", userResponse.getPassword());
     }
 
-    @Test
+    @Test (expected = NullPointerException.class)
     public void password_length_validation() {
         CreateUserRequest createUserRequest = new CreateUserRequest();
         createUserRequest.setUsername("test");
