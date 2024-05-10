@@ -22,4 +22,8 @@ public class Logger2 {
         log.debug(CSV_MARKER, logMessage);
     }
 
+    public void logException(Exception e) {
+        log.error(CSV_MARKER, e.getMessage(), e);
+    }
+
 }

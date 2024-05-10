@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="WARN">
     <Properties>
-        <Property name="csvLog.fileName">csvLog</Property>
+        <Property name="csvLog2.fileName">csvLog</Property>
 <!--        <Property name="file-header">datetime, userId, service, message, code</Property>-->
     </Properties>
     <Appenders>
 <!--        <Console name="Console" target="SYSTEM_OUT" follow="true">-->
 <!--            <PatternLayout pattern="%d{YYYY-MM-dd HH:mm:ss} [%t] %-5p %c{1}:%L - %msg%n" />-->
 <!--        </Console>-->
-        <File name="csvFile" fileName="${csvLog.fileName}.csv" append="true">
+        <File name="csvFile" fileName="${csvLog2.fileName}.csv" append="true">
             <PatternLayout pattern="%msg%n" header="userId, datetime, service, message, code%n" />
             <Filters>
                 <MarkerFilter marker="CSV" onMatch="ACCEPT" onMismatch="DENY" />

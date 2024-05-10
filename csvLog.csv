@@ -1,0 +1,11 @@
+userId, datetime, service, message, code
+userTest, 2024-05-10T17:41:24.899283Z, Service: createUser, Username set to customer, 200
+userTest, 2024-05-10T17:41:25.010487Z, Service: CREATE_USER_REQUEST, User created successfully, 200
+userTest, 2024-05-10T17:43:30.091579Z, Service: Exception, Triggering an exception, 500
+userTest, 2024-05-10T17:43:30.092799Z, Service: Exception, This is a triggered exception, 500
+userTest, 2024-05-10T17:43:31.119765Z, Service: Exception, Triggering an exception, 500
+userTest, 2024-05-10T17:43:31.120074Z, Service: Exception, This is a triggered exception, 500
+userTest, 2024-05-10T17:44:23.808922Z, Service: Exception, Triggering an exception, 500
+userTest, 2024-05-10T17:44:23.809175Z, Service: Exception, This is a triggered exception, 500
+userTest, 2024-05-10T19:04:11.084309Z, Service: createUser, Username set to customer101, 200
+userTest, 2024-05-10T19:04:11.198339Z, Service: CREATE_USER_REQUEST, User created successfully, 200
