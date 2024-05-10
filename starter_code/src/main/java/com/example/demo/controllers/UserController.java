@@ -46,7 +46,7 @@ public class UserController {
 	
 	@PostMapping("/create")
 	public ResponseEntity<User> createUser(@Validated @RequestBody CreateUserRequest createUserRequest) {
-		log.info("Creating user account...", createUserRequest.getUsername());
+		log.info("Creating user account", createUserRequest.getUsername());
 		User user = new User();
 		user.setUsername(createUserRequest.getUsername());
 		Logger2.logToCsv(null, "Service: createUser", "Username set to " + user.getUsername(), "200");
@@ -55,13 +55,13 @@ public class UserController {
 		user.setCart(cart);
 		if(createUserRequest.getPassword().length()<7 ||
 				!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())){
-			Logger2.logToCsv(null, "Service: createUser", "Password less that 7 characters", "404");
-			log.error("User {} Not Created because of invalid password", createUserRequest.getUsername());
+			Logger2.logToCsv(null, "Service: CREATE_USER_FAILURE", "invalid Password less that 7 characters", "404");
+			log.error("User {} Not Created invalid password", createUserRequest.getUsername());
 			return ResponseEntity.badRequest().build();
 		}
 		user.setPassword(bCryptPasswordEncoder.encode(createUserRequest.getPassword()));
 		userRepository.save(user);
-		Logger2.logToCsv(null, "Service: createUser", "User created successfully", "200");
+		Logger2.logToCsv(null, "Service: CREATE_USER_REQUEST", "User created successfully", "200");
 		log.info("User {} Created successfully", createUserRequest.getUsername());
 		return ResponseEntity.ok(user);
 	}

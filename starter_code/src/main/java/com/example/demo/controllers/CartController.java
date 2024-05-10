@@ -56,9 +56,9 @@ public class CartController {
 		Cart cart = user.getCart();
 		IntStream.range(0, request.getQuantity())
 			.forEach(i -> cart.addItem(item.get()));
-		Logger2.logToCsv(user.getId(),"Service: addToCart", "Item added successfully ", "200");
+		Logger2.logToCsv(user.getId(),"Service: addToCart", "Item added to cart successfully ", "200");
 		cartRepository.save(cart);
-		log.info("Add to Cart: cart saved successfully...done");
+		log.info("Add to Cart: cart saved successfully");
 		return ResponseEntity.ok(cart);
 	}
 	

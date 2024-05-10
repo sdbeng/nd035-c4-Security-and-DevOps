@@ -36,34 +36,34 @@ public class OrderController {
 	
 	@PostMapping("/submit/{username}")
 	public ResponseEntity<UserOrder> submit(@PathVariable String username) {
-		log.info("OrderService: Submitting order..");
-		Logger2.logToCsv(null, "Service: submit", "Submitting order", "200");
+		log.info("OrderService: Submitting order");
+		Logger2.logToCsv(null, "Service: submit order", "Submitting order", "200");
 		User user = userRepository.findByUsername(username);
 		if(user == null) {
-			log.error("OrderService: User not found..");
-			Logger2.logToCsv(null, "Service: submit", "User not found", "404");
+			log.error("OrderService: User not found");
+			Logger2.logToCsv(null, "Service: Order Request failures", "submit order fails User not found", "404");
 			return ResponseEntity.notFound().build();
 		}
 		UserOrder order = UserOrder.createFromCart(user.getCart());
 		log.info("OrderService: Order created..");
 		orderRepository.save(order);
 		log.info("OrderService: Order saved..");
-		Logger2.logToCsv(null, "Service: submit", "Order saved", "200");
+		Logger2.logToCsv(null, "Service: Order Request Success", "Order submitted successfully", "200");
 		return ResponseEntity.ok(order);
 	}
 	
 	@GetMapping("/history/{username}")
 	public ResponseEntity<List<UserOrder>> getOrdersForUser(@PathVariable String username) {
 		log.info("OrderService: Fetching order history..");
-		Logger2.logToCsv(null, "Service: getOrdersForUser", "Fetching order history", "200");
+		Logger2.logToCsv(null, "Service: SUBMIT_ORDER_HISTORY", "Start fetching order history", "200");
 		User user = userRepository.findByUsername(username);
 
 		if(user == null) {
 			log.warn("OrderService: Order history not found..");
-			Logger2.logToCsv(null, "Service: getOrdersForUser", "Order history not found", "404");
+			Logger2.logToCsv(null, "Service: SUBMIT_ORDER_HISTORY_FAILS", "Order history fails not found", "404");
 			return ResponseEntity.notFound().build();
 		}
-		Logger2.logToCsv(user.getId(), "Service: getOrdersForUser", "Order history found", "200");
+		Logger2.logToCsv(user.getId(), "Service: SUBMIT_ORDER_HISTORY_SUCCESS", "Order history found success", "200");
 		return ResponseEntity.ok(orderRepository.findByUser(user));
 	}
 }

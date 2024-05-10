@@ -34,14 +34,14 @@ public class ItemController {
 	@GetMapping("/{id}")
 	public ResponseEntity<Item> getItemById(@PathVariable Long id) {
 		log.info("ItemService: Getting item by id..", id);
-//		Logger2.logToCsv(null, "Service: getItemById", "Getting item by id", "200");
+		Logger2.logToCsv(null, "Service: getItemById", "Getting item by id", "200");
 		return ResponseEntity.of(itemRepository.findById(id));
 	}
 	
 	@GetMapping("/name/{name}")
 	public ResponseEntity<List<Item>> getItemsByName(@PathVariable String name) {
 		log.info("ItemService: Getting item by name..", name);
-//		Logger2.logToCsv(null, "Service: getItemsByName", "Getting item by name", "200");
+		Logger2.logToCsv(null, "Service: getItemsByName", "Getting item by name", "200");
 		List<Item> items = itemRepository.findByName(name);
 		return items == null || items.isEmpty() ? ResponseEntity.notFound().build()
 				: ResponseEntity.ok(items);

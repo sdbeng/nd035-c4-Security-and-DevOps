@@ -18,7 +18,8 @@ public class Logger2 {
                          String message,
                          String code)
     {
-
-        log.debug(CSV_MARKER, "CSV Logs", Instant.now(), userId, service,  message, code);
+        String logMessage = String.format("%s, %s, %s, %s, %s", userId != null ? userId : "userTest", Instant.now() ,service, message, code);
+        log.debug(CSV_MARKER, logMessage);
     }
+
 }
