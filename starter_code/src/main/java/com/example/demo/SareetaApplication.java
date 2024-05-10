@@ -29,6 +29,7 @@ public class SareetaApplication {
 		SpringApplication.run(SareetaApplication.class, args);
 		mylogger.trace("greeting user!");
 		mylogger.debug("Welcome to the E-commerce Application!");
+		mylogger.info("Ready to do some shopping?");
 	}
 
 	@Bean
